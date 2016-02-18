@@ -1,0 +1,53 @@
+{
+  "name": "fame",
+  "title": "Fame",
+  "description": "Fame website",
+  "version": "0.0.1",
+  "homepage": "http://www.itsfame.co",
+  "author": {
+    "name": "Fame",
+    "url": "http://www.itsfame.co"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:USER/REPOSITORY.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-changed": "*",
+    "gulp-combine-mq": "*",
+    "gulp-copy": "*",
+    "gulp-csscomb": "*",
+    "gulp-header": "*",
+    "gulp-htmlhint": "*",
+    "gulp-imagemin": "*",
+    "gulp-include": "*",
+    "gulp-jade": "*",
+    "gulp-jscs": "*",
+    "gulp-jshint": "*",
+    "gulp-minify-css": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-replace": "*",
+    "gulp-sass": "*",
+    "gulp-scss-lint": "*",
+    "gulp-shell": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "imagemin-pngquant": "*",
+    "jsdoc": "*",
+    "jshint-stylish": "*",
+    "minami": "*",
+    "minimist": "*",
+    "moment": "*",
+    "require-dir": "*",
+    "run-sequence": "*",
+    "sassdoc": "*",
+    "sassdoc-theme-neat": "*"
+  }
+}

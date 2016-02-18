@@ -1,0 +1,33 @@
+/**
+ * Component: Headroom
+ * --------------------------------------------------
+ */
+//scss-lint:disable NestingDepth, SelectorFormat
+.headroom {
+  &--top {
+    .c-logo {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .c-nav-trigger__icon {
+      background-color: map-get($colors, "fame-orange");
+
+      &:before,
+      &:after {
+        background-color: map-get($colors, "fame-orange");
+      }
+    }
+  }
+
+  &--unpinned {
+    .c-nav-trigger__icon {
+      width: 0;
+
+      &:before,
+      &:after {
+        width: 0;
+      }
+    }
+  }
+}

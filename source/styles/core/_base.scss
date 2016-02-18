@@ -1,0 +1,37 @@
+/**
+ * Core: Base
+ * --------------------------------------------------
+ */
+
+@include font-face("Circular", "../fonts/Circular-Book", 400, normal, eot ttf woff svg);
+@include font-face("Circular", "../fonts/Circular-Bold", 700, bold, eot ttf woff svg);
+@include font-face("Gotham Rounded", "../fonts/GothamRounded-Book", 400, normal, eot ttf woff woff2 svg);
+
+// scss-lint:disable SelectorFormat
+
+
+body {
+  position: relative;
+  font-family: $font-gotham;
+  text-rendering: optimizeSpeed;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: map-get($colors, "text-color");
+  background-color: map-get($colors, "fame-black");
+}
+// scss-lint:lint:enable SelectorFormat
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-circular;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: map-get($colors, "heading-color");
+}

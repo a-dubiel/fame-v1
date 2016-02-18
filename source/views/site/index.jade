@@ -1,0 +1,154 @@
+extends ../extends/layout.jade
+
+block content
+  //
+    █████▒▄▄▄       ███▄ ▄███▓▓█████ 
+    ▓██   ▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀ 
+    ▒████ ░▒██  ▀█▄  ▓██    ▓██░▒███   
+    ░▓█▒  ░░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄ 
+    ░▒█░    ▓█   ▓██▒▒██▒   ░██▒░▒████▒
+    ▒ ░    ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░
+    ░       ▒   ▒▒ ░░  ░      ░ ░ ░  ░
+    ░ ░     ░   ▒   ░      ░      ░   
+             ░  ░       ░      ░  ░
+  div.c-loader(ng-class="{'c-loader--hide': main.isSunUp }")
+    div.c-loader__wrapper
+      div.c-loader__logo
+        img.c-loader__img(src="/images/logo-loader.svg", alt="logo") 
+        div.c-loader__dot
+  div.o-wrapper#home
+    nav.c-nav
+      div.c-nav__wrapper
+        ul.c-nav__list
+          li.c-nav__item
+            a.c-nav__link(ui-sref="about", ui-sref-opts="{ reload: true }") About 
+          li.c-nav__item
+            a.c-nav__link(ui-sref="services", ui-sref-opts="{ reload: true }") Services
+          li.c-nav__item
+            a.c-nav__link(ui-sref="work", ui-sref-opts="{ reload: true }") Work
+          li.c-nav__item
+            a.c-nav__link(ui-sref="contact", ui-sref-opts="{ reload: true }") Contact 
+        ul.c-footer__list--nav
+          li.c-footer__item--nav
+            a.c-footer__link--social(href="mailto:hello@itsfame.co")
+              img.c-footer__icon(src="/images/icon-mail.svg", alt="icon")
+          li.c-footer__item--nav
+            a.c-footer__link--social(href="https://www.twitter.com/justgowithfame", target="_blank")
+              img.c-footer__icon(src="/images/icon-twitter.svg", alt="icon")
+          li.c-footer__item--nav
+            a.c-footer__link--social(href="https://www.twitter.com/justgowithfame", target="_blank")
+              img.c-footer__icon(src="/images/icon-dribbble.svg", alt="icon")
+          //- li.c-footer__item--nav
+          //-   a.c-footer__link--social(href="https://www.twitter.com/justgowithfame", target="_blank")
+          //-     img.c-footer__icon(src="/images/icon-facebook.svg", alt="icon") 
+    header.c-header(headroom) 
+      div.o-container
+        div.c-nav-trigger(ng-click="main.toggleNav()")
+          i.c-nav-trigger__icon
+        a.c-logo.c-logo--top(ui-sref="home", ui-sref-opts="{ reload: true }")
+          img.c-logo__img(src="/images/logo.svg", alt="logo")
+    section.c-hero
+      div.c-hero__bg(ng-class="{'c-hero__bg--sunrise': main.isSunUp }")
+      div.o-container
+        div.c-hero__sun(ng-class="{'c-hero__sun--sunrise': main.isSunUp }")
+        div.c-hero__cloud--big
+        div.c-hero__cloud--small
+        h1.c-hero__intro(ng-class="{'c-hero__intro--sunrise': main.isSunUp }") Fame is not-quite-fameous creative studio from Poland. We create beautiful digital experiences that can change your life for better.
+          
+    section.c-about
+      div.c-about__content
+        div.o-container
+            div.c-about__heading#about
+              h2.c-about__title About
+            article.c-about__text
+              h3 Fame is a small, diligent group of passionate individuals who love working on fantastic projects for great clients. We don't have any motto or manifesto nor do we think we are better than anyone else. We simply love what we do.
+              p For the past couple of years we have been working on small and large projects worldwide. For us, every project is unique and tells a different story. After careful research and planning, we turn those stories into functional and elegant solutions that not only complete business goals but also push boundaries of the brand potential. Great work comes from great relationships. For this reason, our work is build upon active collaboration with clients and mutual understanding. In the world of clutter and confusion we focus on simple and clear solutions. We add value, not noise.   
+            div.c-about__heading#services
+              h2.c-about__title Services
+            aside.c-about__text
+              ul.c-service__list
+                li.c-service__item
+                  img.c-service__img(src="/images/icon-branding.svg")
+                  h4 Branding
+                li.c-service__item
+                  img.c-service__img(src="/images/icon-ux.svg")
+                  h4 UI/UX
+                li.c-service__item
+                  img.c-service__img(src="/images/icon-design.svg")
+                  h4 Web Design
+                li.c-service__item
+                  img.c-service__img(src="/images/icon-dev.svg")
+                  h4 Web Development
+                //- li.c-service__item
+                //-   img.c-service__img(src="/images/icon-magic.svg") 
+                //-   h4 Magic
+    
+    section.c-portfolio#work(ng-controller="ProjectController as p")
+
+      article.c-portfolio__item(ng-repeat="project in p.projects", class="t-{{project.slug}} c-portfolio__item--{{ project.slug }}", ng-class="{ 'is-active': $root.activeProject ==  project.slug }")
+        div.c-portfolio__cover
+          div.o-container
+            img.c-portfolio__img(ng-src="/images/portfolio/{{ project.slug }}/cover-{{ project.slug }}.svg", class="c-portfolio__img--{{ project.slug }}")
+        div.o-container
+          div.c-portfolio__content
+            h5.c-portfolio__date {{ project.client }}
+            h3.c-portfolio__title {{ project.title }}
+            p.c-portfolio__description {{ project.intro }}
+            a.c-portfolio__link(ui-sref="project({ slug: project.slug })") View project
+        section.c-portfolio__details(ui-view="project", ng-if="$root.activeProject == project.slug")
+          
+          
+    section.c-contact#contact
+      div.c-contact__content
+        div.o-container
+          h2.c-contact__message Okay, that’s enough about us. Let’s get in touch and talk about you and your next project.
+          div.c-contact__section
+            h4.c-contact__subtitle E-mail us
+            ul.c-contact__list
+              li.c-contact__item
+                a.c-contact__link(href="mailto:hello@itsfame.co") hello@itsfame.co
+          div.c-contact__section
+            h4.c-contact__subtitle Call us
+            ul.c-contact__list
+              li.c-contact__item
+                a.c-contact__link(href="tel:+14123265758") +1 412 326 5758
+              li.c-contact__item
+                a.c-contact__link(href="tel:+48733382735") +48 733 382 735
+          div.c-contact__section
+            h4.c-contact__subtitle Find us
+            ul.c-contact__list
+              li.c-contact__item Pittsburgh, PA
+              li.c-contact__item Wroclaw, Poland
+          div.c-contact__section
+            h4.c-contact__subtitle Follow us
+            ul.c-contact__list
+              li.c-contact__item
+                a.c-contact__link(href="https://www.twitter.com/justgowithfame", target="_blank") Twitter
+              //- li.c-contact__item
+              //-   a.c-contact__link(href="https://www.facebook.com/justgowithfame", target="_blank") Facebook
+              li.c-contact__item
+                a.c-contact__link(href="https://dribbble.com/itsfame", target="_blank") Dribbble 
+
+    footer.c-footer
+      div.c-footer__content
+        div.o-container
+          ul.c-footer__list
+            li.c-footer__item
+              a.c-footer__link--social(href="mailto:hello@itsfame.co")
+                img.c-footer__icon(src="/images/icon-mail.svg", alt="icon")
+            li.c-footer__item
+              a.c-footer__link--social(href="https://www.twitter.com/justgowithfame", target="_blank")
+                img.c-footer__icon(src="/images/icon-twitter.svg", alt="icon")
+            li.c-footer__item
+              a.c-footer__link--social(href="https://dribbble.com/itsfame", target="_blank")
+                img.c-footer__icon(src="/images/icon-dribbble.svg", alt="icon")
+            //- li.c-footer__item
+            //-   a.c-footer__link--social(href="https://www.twitter.com/justgowithfame", target="_blank")
+            //-     img.c-footer__icon(src="/images/icon-facebook.svg", alt="icon")
+                
+          a.c-logo(href="#")
+            img.c-logo__img(src="/images/logo-footer.svg", alt="logo")
+          p.c-footer__copy
+            | Made with love in 2016.
+              
+          

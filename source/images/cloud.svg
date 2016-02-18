@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="126px" height="66px" viewBox="0 0 126 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Clip 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M47.1325651,11.3888404 C45.1499551,10.5614635 42.998016,10.0444259 40.7313419,9.91188208 C31.021195,9.34346187 20.052174,15.9560544 20.8906449,28.1138824 C-2.58683213,26.4369406 -8.68530654,63.6832074 15.1314125,65.114622 C15.1775401,65.1172495 15.2239596,65.120169 15.2700872,65.1225046 C25.9065809,65.7002671 36.7342998,65.1225046 47.3830553,65.1225046 L108.489249,65.1225046 C108.489249,65.1225046 115.663255,65.5881595 119.840429,61.7119833 C123.653544,58.1732975 125.632067,52.8613275 125.959339,47.2629577 C126.714313,34.3580382 116.8652,23.2847922 103.959988,22.53011 C102.43807,22.4410662 100.94126,22.5014992 99.4844456,22.6947679 C97.9447187,10.6507992 86.7663719,0.881679005 72.6545447,0.0560537645 C72.0143056,0.0186845882 71.377278,0 70.7455053,0 C60.8899689,0 52.1414944,4.48634479 47.1325651,11.3888404 L47.1325651,11.3888404 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-657.000000, -469.000000)">
+            <g id="Hero" sketch:type="MSLayerGroup" transform="translate(-268.000000, -215.000000)">
+                <g id="Rectangle-10">
+                    <g id="Page-1" transform="translate(925.000000, 684.000000)">
+                        <mask id="mask-2" sketch:name="Clip 2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Clip-2" opacity="0.2" fill="#FFFFFF" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

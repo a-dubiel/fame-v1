@@ -1,0 +1,105 @@
+/**
+ * Component: Footer
+ * --------------------------------------------------
+ */
+
+.c-footer {
+  position: relative;
+  z-index: 200;
+  padding: 8rem 0 4rem;
+  background-color: map-get($colors, "fame-black");
+  @include clearfix();
+
+  @include media-above("medium") {
+    padding: 12rem 0 8rem;
+  }
+
+  &:before {
+    content: "";
+    background-color: map-get($colors, "fame-black");
+    display: block;
+    height: 50px;
+    width: 120%;
+    top: 0;
+    position: absolute;
+    left: 50%;
+    transform: rotate(3deg) translateX(-50%);
+    transform-origin: center top;
+    z-index: 150;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .07);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 190;
+  }
+
+
+  &__copy,
+  &__link {
+    font-size: 1.2rem;
+    color: rgba(map-get($colors, "text-color"), .7);
+  }
+
+  &__list {
+    display: none;
+
+    @include media-above("small") {
+      display: block;
+      float: right;
+      margin-top: 1rem;
+    }
+  }
+
+  &__list--nav {
+    text-align: center;
+    position: relative;
+    bottom: -5rem;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 1rem;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item--nav {
+    display: inline-block;
+    margin-right: 1rem;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link--social {
+    opacity: .2;
+    transition: $base-transition;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+
+
+
+}

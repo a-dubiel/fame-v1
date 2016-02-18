@@ -1,0 +1,16 @@
+/**
+ * Component: Logo
+ * --------------------------------------------------
+ */
+
+.c-logo {
+  &__img {
+    width: 50px;
+  }
+
+  &--top {
+    opacity: 0;
+    visibility: hidden;
+    transition: $base-transition;
+  }
+}

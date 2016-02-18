@@ -1,0 +1,19 @@
+/**
+ * Object: Container
+ * --------------------------------------------------
+ */
+
+.o-container {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include media-above("huge") {
+    max-width: 1100px;
+  }
+}
+
+.o-container--wrap {
+  overflow-x: hidden;
+}

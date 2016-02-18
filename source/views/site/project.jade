@@ -1,0 +1,18 @@
+div.c-portfolio__close(ng-click="p.closeProject(p.projectData.slug)") 
+  div.c-portfolio__close-icon &times;
+header.c-portfolio__information
+  h5.c-portfolio__date {{ p.projectData.date }}
+  h3.c-portfolio__title {{ p.projectData.title }}
+  p.c-portfolio__description {{ p.projectData.description }}
+  a.c-portfolio__link(href="{{ p.projectData.url }}", target="_blank", ng-if="p.projectData.url != 'false'") Visit the website  
+  span.c-portfolio__dev(ng-if="p.projectData.url == 'false'") In development
+div.c-portfolio__screens 
+  section(ng-repeat="screen in p.projectData.screens", class="c-portfolio__screen {{ screen.class }}")
+    img(ng-src="/images/portfolio/{{ p.projectData.slug }}/{{ screen.file }}", class="c-portfolio__screen-img")
+section.c-portfolio__bottom
+  h5.c-portfolio__date Client
+  p.c-portfolio__scope {{ p.projectData.client }}
+  h5.c-portfolio__date Scope
+  p.c-portfolio__scope
+    span.c-portfolio__scope-item(ng-repeat="scope in p.projectData.scope") {{ scope }}
+   

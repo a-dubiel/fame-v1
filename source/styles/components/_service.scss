@@ -1,0 +1,43 @@
+/**
+ * Component: Service
+ * --------------------------------------------------
+ */
+
+.c-service {
+
+  &__list {
+    text-align: center;
+
+    @include media-above("medium") {
+      text-align: left;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 5rem;
+    width: 100%;
+
+
+    @include media-above("medium") {
+      margin-bottom: 0;
+      margin-right: 5rem;
+      width: auto;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 4rem;
+    width: 80px;
+
+    @include media-above("medium") {
+      width: auto;
+    }
+
+  }
+}

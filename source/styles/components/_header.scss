@@ -1,0 +1,17 @@
+/**
+ * Component: Header
+ * --------------------------------------------------
+ */
+
+.c-header {
+  position: fixed;
+  width: 100%;
+  height: 15px;
+  left: 0;
+  top: 30px;
+  z-index: 500;
+
+  @include media-above("medium") {
+    top: 100px;
+  }
+}

@@ -1,0 +1,79 @@
+/**
+ * Component: Nav
+ * --------------------------------------------------
+ */
+.c-nav {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: map-get($colors, "fame-black");
+  z-index: 500;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: $base-transition;
+  display: table;
+
+  &__list {
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__link {
+    font-family: $font-circular;
+    color: map-get($colors, "fame-orange");
+    font-size: 5rem;
+    line-height: 5.2rem;
+    font-weight: 700;
+
+    @include media-above("huge") {
+      font-size: 10rem;
+      line-height: 10.2rem;
+    }
+  }
+}
+
+.has-nav-opened {
+  overflow: hidden;
+
+  body {
+    overflow: hidden;
+  }
+
+  .c-nav {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .c-logo--top {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .c-nav-trigger__icon {
+    background-color: map-get($colors, "fame-orange");
+
+    &:after,
+    &:before {
+      background-color: map-get($colors, "fame-orange");
+      width: 10px;
+      left: 10px;
+    }
+
+    &:after {
+      transform: rotate(35deg);
+      top: -3px;
+    }
+
+    &:before {
+      transform: rotate(-35deg);
+      top: 3px;
+    }
+  }
+}

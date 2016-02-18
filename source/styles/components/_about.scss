@@ -1,0 +1,91 @@
+/**
+ * Component: About
+ * --------------------------------------------------
+ */
+.c-about {
+  position: relative;
+  z-index: 200;
+  padding: 10rem 0 4rem;
+  background-color: #fff;
+  @include clearfix();
+
+  @include media-above("medium") {
+    padding: 10rem 0 8rem;
+  }
+
+  &:before {
+    content: "";
+    background-color: #fff;
+    display: block;
+    height: 225px;
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: rotate(3deg) translateX(-50%);
+    transform-origin: center top;
+    z-index: 150;
+    box-shadow: 0 -5px 5px rgba(0, 0, 0, .05);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 190;
+  }
+  //scss-lint:disable SelectorFormat
+  &__text {
+    max-width: 400px;
+    margin: 0 auto 5rem;
+
+    @include media-above("medium") {
+      float: left;
+      width: 80%;
+      margin-bottom: 10rem;
+      max-width: none;
+    }
+
+    &:last-child {
+      @include media-above("huge") {
+        margin-bottom: 15rem;
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      line-height: 2.5rem;
+      font-weight: 400;
+
+      @include media-above("medium") {
+        margin-bottom: 3rem;
+      }
+    }
+
+    p {
+      line-height: 2.4rem;
+
+      @include media-above("medium") {
+        column-count: 2;
+      }
+    }
+  }
+
+  &__heading {
+    text-align: center;
+
+    @include media-above("medium") {
+      float: left;
+      width: 20%;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-family: $font-gotham;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+    font-weight: 400;
+    color: map-get($colors, "text-color");
+  }
+}

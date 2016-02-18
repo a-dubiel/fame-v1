@@ -1,0 +1,268 @@
+/**
+ * Component: Portfolio
+ * --------------------------------------------------
+ */
+.c-portfolio {
+  position: relative;
+
+  &__item {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    backface-visibility: hidden;
+
+    &.is-sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      height: 450px;
+      width: 120%;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: rotate(3deg) translateX(-50%);
+      transform-origin: center top;
+      z-index: 200;
+      transition: $base-transition;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 230;
+    padding-top: 7rem;
+    transition: .8s cubic-bezier(.77, 0, .175, 1);
+
+    @include media-above("small") {
+      width: 70%;
+      padding-top: 5rem;
+    }
+
+    @include media-above("medium") {
+      width: 40%;
+    }
+
+    @include media-above("huge") {
+      padding-top: 2rem;
+    }
+  }
+
+  &__date {
+    font-family: $font-gotham;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .5);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 3.9rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__description {
+    color: #fff;
+    margin-bottom: 3rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__link {
+    font-family: $font-circular;
+    font-size: 1.8rem;
+    color: #fff;
+
+    &:after {
+      content: "→";
+      margin-left: .5rem;
+      transition: margin .2s ease-out;
+    }
+
+    &:hover:after {
+      margin-left: 1rem;
+    }
+  }
+
+  &__img {
+    max-width: none;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: skewY(-3deg);
+
+    @include media-below("small") {
+      left: 50%;
+      margin-left: -50px;
+      top: 270px;
+      width: 370px;
+      opacity: .25;
+    }
+
+
+    &--mytello {
+      left: 450px;
+      top: -100px;
+    }
+
+    &--icanswim {
+      width: 2000px;
+      left: -350px;
+      top: -80px;
+      transform: rotate(4deg);
+
+      @include media-below("small") {
+        width: 500px;
+        top: 370px;
+        left: 40%;
+      }
+    }
+
+    &--deshantz {
+      width: 1000px;
+      left: 450px;
+      top: -100px;
+    }
+
+    &--canvas {
+      width: 770px;
+      left: 450px;
+      top: -150px;
+    }
+
+    &--pind {
+      width: 1200px;
+      left: 450px;
+      top: -130px;
+    }
+
+    &--any {
+      width: 880px;
+      left: 350px;
+      top: -150px;
+    }
+
+    &--bttr {
+      width: 1000px;
+      left: 400px;
+      top: 40px;
+    }
+  }
+
+  &__cover {
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 448px;
+    z-index: 220;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: skewY(3deg) translateX(-50%) translateY(0);
+    left: 50%;
+
+
+    @include media-above("small") {
+      width: 120%;
+      height: 100%;
+    }
+  }
+
+  &__details {
+    position: absolute;
+    width: 100%;
+    overflow-y: scroll;
+    z-index: 900;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 15rem 0 5rem;
+    text-align: center;
+  }
+
+  &__close {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 100;
+    top: 30px;
+    left: 50%;
+    line-height: 50px;
+    font-size: 35px;
+    transform: translateX(-50%) scale(0);
+    cursor: pointer;
+    box-shadow: 0 3px 30px rgba(0, 0, 0, .09);
+  }
+
+  &__close-icon {
+    position: relative;
+    bottom: -1px;
+  }
+
+
+  &__information {
+    margin: 0 auto 5rem;
+    text-align: center;
+    padding: 0 20px;
+    opacity: 0;
+    transform: scale(.95);
+  }
+
+  &__screen {
+    padding: 5rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &.has-shadow .c-portfolio__screen-img {
+      box-shadow: 0 0 40px rgba(0, 0, 0, .2);
+    }
+  }
+
+  &__screens,
+  &__bottom {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  &__scope {
+    font-family: $font-circular;
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  //scss-lint:disable NestingDepth
+  &__scope-item {
+    &:after {
+      content: ", ";
+    }
+
+    &:last-child {
+      &:after {
+        content: "";
+      }
+    }
+  }
+
+  &__dev {
+    font-family: $font-circular;
+    color: #fff;
+    font-size: 1.8rem;
+  }
+}
+
+.has-project-opened {
+  overflow: hidden;
+}

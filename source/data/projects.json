@@ -1,0 +1,152 @@
+{
+  "projects": {
+    "icanswim": {
+      "slug": "icanswim",
+      "client": "ICanSwim",
+      "date": "November 2015",
+      "title": "Making waves in the world of swimming",
+      "intro": "Teamwork make the dream work. We collaborated with former pro swimmers and created identity for their very own swim school. Jump in!",
+      "description": "We teamed up with former pro swimmers who decided to share their knowledge and expertise. That's how ICanSwim became their very own swim school. We created an engaging web presence that easly communicates their passion and experience. Results? More than 300 sign ups in the first month. Beat that Michael Phelps!",
+      "scope": ["Branding", "Design", "Development", "Print"],
+      "url": "http://www.icanswim.eu",
+      "screens": [{
+          "file": "icanswim-logo.png",
+          "class": "has-shadow"
+        }, {
+          "file": "icanswim-home.png",
+          "class": "has-shadow"
+        },
+        {
+          "file": "icanswim-mobile.png"
+        },
+
+        {
+          "file": "icanswim-fb.jpg",
+          "class": "has-shadow"
+        }
+      ]
+    },
+    "mytello": {
+      "slug": "mytello",
+      "client": "mytello",
+      "date": "November 2015",
+      "title": "Don't stress and call the world for less",
+      "intro": "Mytello provides affordable calls around the world. They reached out to us to design and develop their web presence. It turned out pretty damn good.",
+      "description": "When we approached this project we had three main goals in mind. First, make sure onboarding process is on point. Two, make interface intuitive and accessible through broad range of devices. Three, use conversion centred design that drives towards business goals.",
+      "scope": ["Design", "Development", "Landing Page"],
+      "url": "http://www.mytello.com",
+      "screens": [{
+        "file": "mytello-home.png",
+        "class": "has-shadow is-browser"
+      },
+      {
+        "file": "mytello-mobile.png"
+      },
+      {
+        "file": "mytello-home-2.png",
+        "class": "has-shadow is-browser"
+      }]
+    },
+    "deshantz": {
+      "slug": "deshantz",
+      "client": "Richard Deshantz Restaurant Group",
+      "date": "September 2015",
+      "title": "Cooking raw with the Pittsburgh finest",
+      "intro": "Richard DeShantz is a celebrity chef from Pittsburgh. His marketing team wanted us to create his new brand. We served it well done.",
+      "description": "When we approached this project we had three main goals in mind. First, make sure onboarding process is on point. Two, make interface intuitive and accessible through broad range of devices. Three, use conversion centred design that drives towards business goals.",
+      "scope": ["Design", "Development"],
+      "url": "http://www.richarddeshantz.com",
+      "screens": [{
+        "file": "deshantz-logo.png",
+        "class": "has-shadow"
+      },
+      {
+        "file": "deshantz-home.png",
+        "class": "has-shadow is-browser"
+      },
+      {
+        "file": "deshantz-mobile.png"
+      }]
+    },
+    "canvas": {
+      "slug": "canvas",
+      "client": "Canvas",
+      "date": "January 2016",
+      "title": "Painting the Canvas at the first go",
+      "intro": "Canvas is a company engaged in design, production and installation of unique solutions that support brand in stores.",
+      "description": "Coming from the Polish capital Warsaw, Canvas is a design studio which creates instore installations and various promotion campaigns. We redesigned their content-rich web presence while making it easy to update. To accomplish the goals of the project we used the power of WordPress custom fields allowing the client to easily maintain and manage the content. This project was done on assignment with Forinstudio.com.",
+      "scope": ["Design", "Development"],
+      "url": "false",
+      "screens": [
+      {
+        "file": "canvas-home.png",
+        "class": "has-shadow is-browser"
+      },
+      {
+        "file": "canvas-about.png",
+        "class": "has-shadow is-browser"
+      },
+      {
+        "file": "canvas-mobile.png"
+      }]
+    },
+    "pind": {
+      "slug": "pind",
+      "client": "University of Pittsburgh",
+      "date": "Janury 2016",
+      "title": "Brain cells and other scientific findings",
+      "intro": "University of Pittsburgh reached out to us to create a web presence for their world class research program.",
+      "description": "The Pittsburgh Institute for Neurodegenerative Disease is transforming cutting-edge science into novel therapies and diagnostics that directly influence individuals affected by neurodegenerative diseases. The main goal of this project was to create a web presence for a world class scientific institution and encourage their audience to find out more about their ground breaking research and finidngs. By using the power of custom fields in Wordpress we made the content easy to update and maintain.",
+      "scope": ["Design", "Development"],
+      "url": "http://pind.itsfame.co",
+      "screens": [
+      {
+        "file": "pind-home.png",
+        "class": "has-shadow is-browser"
+      },
+      {
+        "file": "pind-logo.png",
+        "class": "has-shadow"
+      },
+      {
+        "file": "pind-lab.png",
+        "class": "has-shadow is-browser"
+      },
+      {
+       "file": "pind-mobile.png"
+      }]
+    },
+    "any": {
+      "slug": "any",
+      "client": "Any",
+      "date": "November 2015",
+      "title": "Anything anywhere with everyone",
+      "intro": "Any is an app that helps you engage with people around you. In seconds you can join or create events in your area.",
+      "description": "Any is a small startup company from Wroclaw, Poland. Their app leverage the idea of micro events. With Any you can quickly organize and find events and interests around you. They needed a multi lingual landing page that will help build the brand and also encourage users to download the beta version of their app. We combined the power of Angular with subtle animations to create a very uniqe design that engaged the users instantly.",
+      "scope": ["Design", "Development"],
+      "url": "http://www.anyapp.mobi",
+      "screens": [
+      {
+        "file": "any-home.png",
+        "class": "has-shadow is-browser"
+      },
+      {
+        "file": "any-mobile.png"
+      }]
+    },
+    "bttr": {
+      "slug": "bttr",
+      "client": "Bttr",
+      "date": "February 2016",
+      "title": "Future of your city in your own hands",
+      "intro": "Bttr is a concept app we have recently been working on. Simply put, Bttr is a crowd sourced urban planning.",
+      "description": "Another pothole on your way to work? Is that sign broken again? Do you think your local park needs a playground for your kids? Put the future of your area in your own hands. With Bttr you can quickly upload ideas, complaints or improvements that your city might need. Acknowledge your local authorities and together make it better. Or Bttr.",
+      "scope": ["Design", "Concept"],
+      "url": "false",
+      "screens": [
+      {
+        "file": "bttr-mobile.png"
+      }]
+    }
+  }
+}
